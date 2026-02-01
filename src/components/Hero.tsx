@@ -1,5 +1,7 @@
 import { JsonDisplay } from './JsonDisplay';
 import { Download, Mail } from 'lucide-react';
+import profileImg from '../assets/profile.png';
+import resumePdf from '../assets/Akash Debnath_Resume.pdf';
 
 export const Hero = () => {
     const developerProfile = {
@@ -42,8 +44,8 @@ export const Hero = () => {
 
                     <div className="flex gap-4">
                         <a
-                            href="/Akash Debnath_Resume.pdf"
-                            download
+                            href={resumePdf}
+                            download="Akash_Debnath_Resume.pdf"
                             className="px-6 py-3 bg-editor-selection text-white border border-editor-line hover:border-editor-key transition-all flex items-center gap-2 text-sm font-medium group"
                         >
                             <Download size={16} className="text-editor-function group-hover:text-editor-key" />
@@ -64,15 +66,14 @@ export const Hero = () => {
                         <div className="absolute inset-0 border-2 border-dashed border-editor-line rounded-full animate-spin-slow opacity-20" />
                         <div className="absolute inset-4 border border-editor-line rounded-full" />
                         <img
-                            src="/profile.png"
+                            src={profileImg}
                             alt="Akash Debnath"
                             className="w-full h-full object-cover rounded-full grayscale hover:grayscale-0 transition-all duration-500 border-4 border-editor-line"
                         />
-
-                        {/* floating code symbols */}
-                        <div className="absolute -top-4 right-10 text-editor-keyword animate-bounce">{`</>`}</div>
-                        <div className="absolute bottom-10 -left-6 text-editor-function animate-pulse">{`{}`}</div>
                     </div>
+                    {/* floating code symbols */}
+                    <div className="absolute -top-4 right-10 text-editor-keyword animate-bounce">{`</>`}</div>
+                    <div className="absolute bottom-10 -left-6 text-editor-function animate-pulse">{`{}`}</div>
                 </div>
             </div>
         </section>
