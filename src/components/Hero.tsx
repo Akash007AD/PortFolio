@@ -61,19 +61,19 @@ export const Hero = () => {
                     </div>
                 </div>
 
-                <div className="hidden md:flex justify-center relative">
-                    <div className="relative w-80 h-80">
+                <div className="flex justify-center relative order-first md:order-last mb-8 md:mb-0">
+                    <div className="relative w-64 h-64 md:w-80 md:h-80">
                         <div className="absolute inset-0 border-2 border-dashed border-editor-line rounded-full animate-spin-slow opacity-20" />
                         <div className="absolute inset-4 border border-editor-line rounded-full" />
                         <img
                             src={profileImg}
                             alt="Akash Debnath"
-                            className="w-full h-full object-cover rounded-full grayscale hover:grayscale-0 transition-all duration-500 border-4 border-editor-line"
+                            className="w-full h-full object-cover rounded-full grayscale hover:grayscale-0 transition-all duration-500 border-4 border-editor-line relative z-10"
                         />
                     </div>
                     {/* floating code symbols */}
-                    <div className="absolute -top-4 right-10 text-editor-keyword animate-bounce">{`</>`}</div>
-                    <div className="absolute bottom-10 -left-6 text-editor-function animate-pulse">{`{}`}</div>
+                    <div className="absolute -top-4 right-10 text-editor-keyword animate-bounce hidden md:block">{`</>`}</div>
+                    <div className="absolute bottom-10 -left-6 text-editor-function animate-pulse hidden md:block">{`{}`}</div>
                 </div>
             </div>
         </section>
